@@ -1,0 +1,44 @@
+{
+   "component":"form",
+   "content":[
+      {
+         "component":"input",
+         "name":"title",
+         "label":"文章标题"
+      },
+      {
+         "component":"radio",
+         "name":"isAuth",
+         "default":1,
+         "options":[
+            {
+               "label":"原创",
+               "value":1
+            },
+            {
+               "label":"转载",
+               "value":2
+            }
+         ]
+      },
+      {
+         "component":"input",
+         "name":"originUrl",
+         "label":"转载来源",
+         "visibleOn":"${data.isAuth === 2}"
+      },
+      {
+         "component":"btns",
+         "content":[
+            {
+               "label":"提交",
+               "action":"submit"
+            },
+            {
+               "label":"重置",
+               "action":"clear"
+            }
+         ]
+      }
+   ]
+}
